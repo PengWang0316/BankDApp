@@ -16,7 +16,8 @@ import { AccountDetailComponent } from './account-detail/account-detail.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
