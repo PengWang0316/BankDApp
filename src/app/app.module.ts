@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AccountListComponent } from './account-list/account-list.component';
@@ -14,13 +15,15 @@ import { AddAccountFormComponent } from './add-account-form/add-account-form.com
     AppComponent,
     AccountListComponent,
     AccountDetailComponent,
-    AddAccountFormComponent
+    AddAccountFormComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
