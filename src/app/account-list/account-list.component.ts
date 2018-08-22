@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AccountService } from '../account.service';
 
-import { FETCH_BALANCE_API } from '../../UrlApis';
-
 @Component({
   selector: 'app-account-list',
   templateUrl: './account-list.component.html',
@@ -21,7 +19,7 @@ export class AccountListComponent implements OnInit {
   onSelect(account: object) {
     this.selectedBalance = null;
     this.selectedAccount = account;
-    this.accountService.fetchBalance(`${FETCH_BALANCE_API}/${account._id}`).subscribe(balance => this.selectedBalance = balance);
+    this.accountService.fetchBalance(account._id).subscribe(balance => this.selectedBalance = balance);
   }
 
 }

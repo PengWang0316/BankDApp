@@ -1,0 +1,20 @@
+<div class="root">
+  <div>Account Number: {{account._id}}</div>
+  <div>First Name: {{account.firstName}}</div>
+  <div>Last Name: {{account.lastName}}</div>
+  <div *ngIf="balance">Balance: {{balance}}</div>
+  <div>
+    <mat-form-field class="input">
+      <input matInput placeholder="Deposit" [(ngModel)]="depositAmount" type="number">
+      <span matPrefix>$&nbsp;</span>
+    </mat-form-field>
+    <button mat-button (click)="handleDeposit()">Deposit</button>
+  </div>
+  <div>
+    <mat-form-field class="input">
+      <input matInput placeholder="Withdraw" [(ngModel)]="withdrawAmount" type="number">
+      <span matPrefix>$&nbsp;</span>
+    </mat-form-field>
+    <button mat-button (click)="handleWithdraw()">Withdraw</button>
+  </div>
+</div>

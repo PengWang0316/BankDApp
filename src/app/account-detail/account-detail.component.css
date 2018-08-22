@@ -1,0 +1,6 @@
+.root {
+  border: 1px solid gray;
+  border-left: 5px solid orange;
+  padding: 6px 10px;
+  margin: 10px 0 40px 0;
+}
