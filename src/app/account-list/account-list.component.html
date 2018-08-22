@@ -1,0 +1,13 @@
+<div class="flexBox">
+  <div class="listDiv">
+    <div class="title">Account Number</div>
+    <ul>    
+      <li *ngFor="let account of accounts" (click)="onSelect(account)" [class.selected]="account===selectedAccount">
+        {{account._id}}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="selectedAccount">
+      <app-account-detail [account]="selectedAccount" [balance]="selectedBalance"></app-account-detail>
+  </div>
+</div>

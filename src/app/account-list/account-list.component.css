@@ -1,0 +1,33 @@
+.flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.title {
+  size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 5px;
+  transition: all .5s;
+  padding: 7px 12px;
+}
+li:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+  color: white;
+}
+.selected {
+  background-color: lightseagreen;
+  color: white;
+}
+.listDiv {
+  margin-right: 30px;
+}
