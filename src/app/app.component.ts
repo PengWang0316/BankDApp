@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AccountService } from './account.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BankDApp';
+  accounts: object[];
+
+  constructor(private accountService: AccountService) {}
+
+  ngOnInit() {
+    this.accountService.fetchAllAcount().subscribe(accounts => this.accounts = accounts);
+  }
+
+  handleAddUser(newUser) {
+    this.accounts.push(newUser);
+  }
 }

@@ -4,6 +4,7 @@
     <h3>The demo for the bank DApp</h3>
   </div>
   
-  <app-account-list></app-account-list>
+  <app-account-list [accounts]="accounts"></app-account-list>
+  <app-add-account-form (valueChange)="handleAddUser($event)"></app-add-account-form>
 </div>
 
