@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
 
 @Component({
@@ -13,6 +13,8 @@ export class AddAccountFormComponent implements OnInit {
   initailAmount: number;
 
   constructor(private accountService: AccountService) { }
+
+  ngOnInit() {}
 
   handleSubmit() {
     this.accountService.addUser(this.firstName, this.lastName, this.initailAmount).subscribe(id => {

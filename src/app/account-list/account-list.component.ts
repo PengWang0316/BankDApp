@@ -8,7 +8,7 @@ import { AccountService } from '../account.service';
 })
 export class AccountListComponent implements OnInit {
 
-  @Input() accounts: object[];
+  @Input() accounts: any[];
   selectedAccount: object;
   selectedBalance: string;
 
@@ -16,7 +16,7 @@ export class AccountListComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSelect(account: object) {
+  onSelect(account: any) {
     this.selectedBalance = null;
     this.selectedAccount = account;
     this.accountService.fetchBalance(account._id).subscribe(balance => this.selectedBalance = balance);

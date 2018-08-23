@@ -7,7 +7,7 @@ import { AccountService } from '../account.service';
   styleUrls: ['./account-detail.component.css']
 })
 export class AccountDetailComponent implements OnInit {
-  @Input() account: object;
+  @Input() account: any;
   @Input() balance: string;
   depositAmount: number;
   withdrawAmount: number;
